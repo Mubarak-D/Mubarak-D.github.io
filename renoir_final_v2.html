@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0"/>
+<meta name="color-scheme" content="only light"/>
+<meta name="description" content="RE'NOIR — Handcrafted fragrance blends from Sri Lanka. Genuine designer oil, perfected by hand. 10ml spray from Rs. 4,500."/>
+<title>RE'NOIR — Blended To Be Perfect</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{color-scheme:only light;scroll-behavior:smooth}
+
+:root{
+  --cream:#EBE6DE;
+  --cream2:#F5F1EB;
+  --plum:#554C5B;
+  --deep:#2D0E3B;
+  --deeper:#1a0824;
+  --rose:#B76E79;
+  --copper:#C45E1A;
+  --ink:#0e0812;
+  --dim-d:rgba(235,230,222,0.48);
+  --dim-l:rgba(14,8,18,0.42);
+  --gap-sm:clamp(24px,4vw,48px);
+  --gap-md:clamp(48px,7vw,96px);
+  --gap-lg:clamp(80px,10vw,140px);
+  --side:clamp(20px,5vw,80px);
+}
+
+body{
+  background:#1a0824;
+  color:#EBE6DE;
+  font-family:'DM Sans',sans-serif;
+  font-weight:300;
+  overflow-x:hidden;
+  -webkit-text-size-adjust:100%;
+}
+
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:0;opacity:.5;
+}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:600;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:22px var(--side);
+  transition:background .4s,border-color .4s;
+}
+nav.scrolled{
+  background:rgba(26,8,36,0.92);
+  border-bottom:1px solid rgba(196,94,26,.2);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+}
+.nav-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1rem,2.5vw,1.3rem);
+  letter-spacing:.28em;color:#EBE6DE;text-decoration:none;font-weight:400;
+}
+.nav-logo .apos{color:#C45E1A}
+.nav-links{display:flex;gap:clamp(20px,3vw,44px);list-style:none}
+.nav-links a{
+  font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(235,230,222,.48);text-decoration:none;transition:color .3s;
+}
+.nav-links a:hover{color:#EBE6DE}
+.nav-order{
+  font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+  padding:10px clamp(16px,2vw,26px);border:1px solid rgba(196,94,26,.6);
+  color:#C45E1A;text-decoration:none;
+  transition:background .3s,color .3s;display:inline-block;
+}
+.nav-order:hover{background:#C45E1A;color:#EBE6DE}
+.nav-ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-ham span{width:24px;height:1px;background:#EBE6DE;transition:all .3s;display:block}
+.nav-ham.open span:nth-child(1){transform:rotate(45deg) translate(4px,4px)}
+.nav-ham.open span:nth-child(2){opacity:0}
+.nav-ham.open span:nth-child(3){transform:rotate(-45deg) translate(4px,-4px)}
+.mob-menu{
+  display:none;position:fixed;inset:0;z-index:500;
+  background:rgba(26,8,36,.98);backdrop-filter:blur(20px);
+  flex-direction:column;justify-content:center;align-items:center;gap:32px;
+}
+.mob-menu.open{display:flex}
+.mob-menu a{
+  font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,6vw,2.8rem);
+  color:#EBE6DE;text-decoration:none;letter-spacing:.1em;
+  opacity:0;transform:translateY(20px);transition:opacity .4s,transform .4s;
+}
+.mob-menu.open a{opacity:1;transform:none}
+.mob-menu.open a:nth-child(1){transition-delay:.05s}
+.mob-menu.open a:nth-child(2){transition-delay:.1s}
+.mob-menu.open a:nth-child(3){transition-delay:.15s}
+.mob-menu.open a:nth-child(4){transition-delay:.2s}
+.mob-menu a .apos{color:#C45E1A}
+
+.hero{
+  min-height:100svh;
+  display:grid;grid-template-columns:1.1fr .9fr;
+  position:relative;overflow:hidden;
+  background:#1a0824;
+}
+.hero-bg{
+  position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 55% 65% at 72% 38%,rgba(183,110,121,.14) 0%,transparent 60%),
+    radial-gradient(ellipse 38% 48% at 18% 82%,rgba(196,94,26,.08) 0%,transparent 55%),
+    radial-gradient(ellipse 75% 55% at 50% 0%,rgba(85,76,91,.24) 0%,transparent 50%);
+  animation:bgPulse 9s ease-in-out infinite alternate;
+}
+@keyframes bgPulse{0%{opacity:.8}100%{opacity:1}}
+
+.hero-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(100px,12vw,140px) var(--side) clamp(60px,8vw,90px);
+  position:relative;z-index:3;
+}
+.eyebrow{
+  display:flex;align-items:center;gap:14px;
+  font-size:.58rem;letter-spacing:.38em;text-transform:uppercase;color:#B76E79;
+  margin-bottom:clamp(28px,4vw,44px);
+  opacity:0;animation:slideUp .9s ease .1s forwards;
+}
+.eyebrow::before{content:'';width:28px;height:1px;background:#B76E79;flex-shrink:0}
+
+.logotype{opacity:0;animation:slideUp .9s ease .3s forwards;margin-bottom:clamp(28px,4vw,48px)}
+.logotype-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3.8rem,7.5vw,8rem);
+  font-weight:300;letter-spacing:.1em;
+  color:#EBE6DE;line-height:1;
+}
+.logotype-name .apos{color:#C45E1A}
+.rule-wrap{display:flex;align-items:center;gap:12px;margin-top:16px}
+.rule{height:1px;flex:1;max-width:180px;background:linear-gradient(to right,#C45E1A,transparent)}
+.rule.r{background:linear-gradient(to left,#C45E1A,transparent)}
+.tagline-txt{
+  font-size:.52rem;letter-spacing:.36em;text-transform:uppercase;
+  color:rgba(235,230,222,.38);white-space:nowrap;
+}
+
+.hero-desc{
+  font-size:clamp(.8rem,.9vw,.9rem);line-height:2.1;color:rgba(235,230,222,.5);
+  max-width:380px;margin-bottom:clamp(36px,5vw,56px);
+  opacity:0;animation:slideUp .9s ease .6s forwards;
+}
+.hero-desc strong{color:#EBE6DE;font-weight:400}
+
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap;opacity:0;animation:slideUp .9s ease .8s forwards}
+.btn-fill{
+  padding:15px clamp(28px,3vw,44px);background:#EBE6DE;
+  font-family:'DM Sans',sans-serif;font-size:.6rem;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;text-decoration:none;
+  color:#0e0812;display:inline-block;
+  transition:background .3s,color .3s;
+}
+.btn-fill:hover{background:#C45E1A;color:#EBE6DE}
+.btn-ghost{
+  font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(235,230,222,.52);text-decoration:none;transition:color .3s;
+  display:flex;align-items:center;gap:8px;
+}
+.btn-ghost::after{content:'→';transition:transform .3s}
+.btn-ghost:hover{color:#EBE6DE}
+.btn-ghost:hover::after{transform:translateX(4px)}
+
+.hero-right{
+  display:flex;align-items:center;justify-content:center;
+  position:relative;z-index:3;overflow:hidden;
+}
+.bottle-wrap{
+  position:relative;
+  animation:floatUp 1s ease .5s both, floatLoop 6s ease-in-out 1.5s infinite;
+}
+@keyframes floatUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@keyframes floatLoop{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.bottle-glow{
+  position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);
+  width:120px;height:40px;
+  background:radial-gradient(ellipse,rgba(196,94,26,.35) 0%,transparent 70%);
+  animation:glowPulse 6s ease-in-out 1.5s infinite;
+}
+@keyframes glowPulse{0%,100%{opacity:.7;width:120px}50%{opacity:1;width:140px}}
+
+.marquee-wrap{
+  background:#2D0E3B;
+  border-top:1px solid rgba(196,94,26,.18);
+  border-bottom:1px solid rgba(196,94,26,.18);
+  padding:14px 0;overflow:hidden;
+}
+.marquee-inner{
+  display:flex;width:max-content;
+  animation:marquee 26s linear infinite;
+}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.marquee-item{
+  font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;
+  color:rgba(235,230,222,.45);
+  padding:0 clamp(20px,3vw,44px);white-space:nowrap;
+}
+.marquee-item .dot{color:#C45E1A;margin:0 4px}
+
+.sec-label{
+  font-size:.55rem;letter-spacing:.36em;text-transform:uppercase;
+  color:#B76E79;margin-bottom:14px;
+}
+.sec-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem,4.5vw,4rem);
+  font-weight:300;line-height:1.15;
+  margin-bottom:clamp(16px,2.5vw,28px);
+}
+.sec-title em{color:#C45E1A;font-style:italic}
+.sec-title.on-dark{color:#EBE6DE}
+.sec-title.on-light{color:#2D0E3B}
+.sec-body-dark{font-size:clamp(.8rem,.85vw,.88rem);line-height:2;color:rgba(235,230,222,.5);max-width:480px}
+.sec-body-light{font-size:clamp(.8rem,.85vw,.88rem);line-height:2;color:rgba(14,8,18,.55);max-width:480px;margin-bottom:16px}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+.about{
+  background:#F5F1EB;
+  padding:var(--gap-lg) var(--side);
+  display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,100px);
+  align-items:center;position:relative;overflow:hidden;
+}
+.watermark{
+  position:absolute;right:-3%;top:50%;transform:translateY(-50%);
+  font-family:'Cormorant Garamond',serif;font-size:clamp(6rem,12vw,14rem);
+  font-weight:300;letter-spacing:.05em;color:rgba(45,14,59,.05);
+  pointer-events:none;user-select:none;line-height:1;white-space:nowrap;
+}
+.stats{display:flex;gap:clamp(20px,4vw,48px);margin-top:clamp(28px,4vw,44px)}
+.stat-n{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.4rem,4vw,3.6rem);
+  font-weight:300;color:#2D0E3B;line-height:1;
+}
+.stat-n span{font-size:55%;color:#C45E1A}
+.stat-l{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(14,8,18,.42);margin-top:4px}
+
+.cards-stack{display:flex;flex-direction:column;gap:clamp(16px,2.5vw,24px)}
+.acard{
+  background:#fff;border-left:2px solid #C45E1A;
+  padding:clamp(20px,3vw,32px);
+}
+.ac-icon{font-size:1.1rem;color:#C45E1A;margin-bottom:12px;display:block}
+.ac-title{
+  font-family:'Cormorant Garamond',serif;font-size:1.15rem;
+  font-weight:400;color:#2D0E3B;margin-bottom:8px;
+}
+.ac-text{font-size:.8rem;line-height:1.9;color:rgba(14,8,18,.5)}
+
+.collection{
+  background:#1a0824;padding:var(--gap-lg) var(--side);
+}
+.col-head{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  margin-bottom:clamp(40px,6vw,72px);flex-wrap:wrap;gap:20px;
+}
+.btn-line{
+  font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;
+  color:#C45E1A;text-decoration:none;border-bottom:1px solid rgba(196,94,26,.4);
+  padding-bottom:4px;transition:border-color .3s,color .3s;
+}
+.btn-line:hover{border-color:#C45E1A}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:clamp(16px,2vw,24px);
+}
+.pcard{
+  background:rgba(45,14,59,.5);
+  border:1px solid rgba(196,94,26,.12);
+  padding:clamp(24px,3vw,40px);
+  display:flex;flex-direction:column;
+  transition:border-color .3s,background .3s;
+  position:relative;overflow:hidden;
+}
+.pcard::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(to right,transparent,rgba(196,94,26,.5),transparent);
+  opacity:0;transition:opacity .3s;
+}
+.pcard:hover{border-color:rgba(196,94,26,.3);background:rgba(45,14,59,.7)}
+.pcard:hover::before{opacity:1}
+.p-num{
+  font-size:.52rem;letter-spacing:.3em;text-transform:uppercase;
+  color:rgba(235,230,222,.28);margin-bottom:clamp(20px,3vw,32px);
+}
+.p-bottle{margin-bottom:clamp(20px,3vw,32px);display:flex;justify-content:center}
+.p-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.4rem,2vw,1.8rem);
+  font-weight:300;color:#EBE6DE;margin-bottom:4px;
+}
+.p-sub{
+  font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#C45E1A;margin-bottom:clamp(12px,2vw,20px);
+}
+.p-desc{
+  font-size:.8rem;line-height:1.95;
+  color:rgba(235,230,222,.44);flex:1;margin-bottom:clamp(20px,3vw,32px);
+}
+.p-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+.p-price{display:flex;flex-direction:column}
+.p-price small{
+  font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(235,230,222,.32);margin-bottom:2px;
+}
+.p-price b{
+  font-family:'Cormorant Garamond',serif;font-size:1.4rem;
+  font-weight:300;color:#EBE6DE;
+}
+.p-btn{
+  width:40px;height:40px;border:1px solid rgba(196,94,26,.4);
+  display:flex;align-items:center;justify-content:center;
+  color:#C45E1A;text-decoration:none;font-size:.9rem;
+  transition:background .3s,border-color .3s,color .3s;flex-shrink:0;
+}
+.p-btn:hover{background:#C45E1A;border-color:#C45E1A;color:#EBE6DE}
+
+.process{
+  background:#EBE6DE;
+  padding:var(--gap-lg) var(--side);
+}
+.process-inner{margin-bottom:clamp(40px,6vw,72px)}
+.steps{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:clamp(16px,2vw,24px);
+}
+.step{
+  padding:clamp(20px,2.5vw,32px) 0;
+  border-top:1px solid rgba(14,8,18,.12);
+}
+.step-n{
+  font-family:'Cormorant Garamond',serif;font-size:2.6rem;
+  font-weight:300;color:rgba(196,94,26,.22);margin-bottom:clamp(14px,2vw,24px);
+  line-height:1;
+}
+.step-t{
+  font-family:'Cormorant Garamond',serif;font-size:1.1rem;
+  font-weight:400;color:#2D0E3B;margin-bottom:10px;
+  letter-spacing:.05em;
+}
+.step-d{
+  font-size:.78rem;line-height:1.95;color:rgba(14,8,18,.5);
+}
+
+.trust{
+  background:#2D0E3B;
+  padding:clamp(40px,6vw,72px) var(--side);
+  text-align:center;
+}
+.trust-head{
+  font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,2rem);
+  font-weight:300;color:#EBE6DE;margin-bottom:clamp(28px,4vw,48px);letter-spacing:.04em;
+}
+.trust-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:clamp(24px,4vw,60px);max-width:640px;margin:0 auto;
+}
+.trust-item{display:flex;flex-direction:column;align-items:center;gap:10px}
+.trust-icon{
+  width:42px;height:42px;border:1px solid rgba(196,94,26,.35);
+  display:flex;align-items:center;justify-content:center;
+  color:#C45E1A;font-size:1rem;margin-bottom:4px;
+}
+.trust-val{
+  font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.5vw,2.2rem);
+  font-weight:300;color:#EBE6DE;
+}
+.trust-val span{color:#C45E1A}
+.trust-lbl{font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(235,230,222,.4)}
+
+.scarcity{
+  background:#C45E1A;
+  padding:16px var(--side);
+  display:flex;align-items:center;justify-content:center;gap:14px;
+  text-align:center;flex-wrap:wrap;
+}
+.scarcity-txt{
+  font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
+  color:#EBE6DE;font-weight:500;
+}
+.scarcity-num{
+  font-family:'Cormorant Garamond',serif;font-size:1.1rem;
+  font-weight:400;color:#EBE6DE;
+}
+.scarcity-dot{width:6px;height:6px;background:#EBE6DE;border-radius:50%;opacity:.5}
+
+.contact{
+  background:#1a0824;
+  padding:var(--gap-lg) var(--side);
+  display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,8vw,120px);
+  align-items:center;
+}
+.contact-sub{
+  font-size:clamp(.8rem,.85vw,.88rem);line-height:2;
+  color:rgba(235,230,222,.46);
+  max-width:400px;margin-bottom:clamp(28px,4vw,44px);
+}
+.c-links{display:flex;flex-direction:column;gap:16px}
+.c-link{
+  display:flex;align-items:center;gap:16px;
+  padding:clamp(16px,2.5vw,22px) clamp(20px,3vw,28px);
+  border:1px solid rgba(196,94,26,.2);
+  color:#EBE6DE;text-decoration:none;
+  transition:border-color .3s,background .3s;
+}
+.c-link:hover{border-color:rgba(196,94,26,.5);background:rgba(196,94,26,.06)}
+.c-link svg{width:18px;height:18px;fill:#C45E1A;flex-shrink:0}
+.c-link-txt{font-size:.8rem;letter-spacing:.08em;color:rgba(235,230,222,.72)}
+.c-link-arrow{margin-left:auto;color:rgba(196,94,26,.5);font-size:.9rem;transition:transform .3s}
+.c-link:hover .c-link-arrow{transform:translateX(4px);color:#C45E1A}
+.contact-note{
+  font-size:.72rem;line-height:1.9;
+  color:rgba(235,230,222,.26);margin-top:clamp(16px,2vw,24px);
+  font-style:italic;
+}
+
+.contact-right{
+  display:flex;flex-direction:column;justify-content:center;
+  border-left:1px solid rgba(196,94,26,.18);
+  padding-left:clamp(30px,5vw,72px);
+}
+.pull-quote{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.5rem,2.5vw,2.2rem);
+  font-weight:300;line-height:1.4;
+  color:rgba(235,230,222,.6);
+  font-style:italic;margin-bottom:24px;
+}
+.pull-quote em{color:#C45E1A;font-style:normal}
+.pull-attr{
+  font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;
+  color:rgba(235,230,222,.28);
+}
+
+footer{
+  background:#0e0812;
+  padding:clamp(28px,4vw,48px) var(--side);
+  display:flex;align-items:center;justify-content:space-between;
+  border-top:1px solid rgba(196,94,26,.12);
+  flex-wrap:wrap;gap:16px;
+}
+.f-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;letter-spacing:.28em;color:#EBE6DE;font-weight:300;
+}
+.f-logo span{color:#C45E1A}
+.f-copy{font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(235,230,222,.22)}
+.f-links{display:flex;gap:24px}
+.f-links a{font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(235,230,222,.28);text-decoration:none;transition:color .3s}
+.f-links a:hover{color:#EBE6DE}
+
+@keyframes slideUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+@media(max-width:768px){
+  nav{padding:18px var(--side)}
+  .nav-links,.nav-order{display:none}
+  .nav-ham{display:flex}
+
+  .hero{grid-template-columns:1fr;min-height:100svh}
+  .hero-right{display:none}
+  .hero-left{padding:110px clamp(20px,5vw,32px) 64px}
+  .logotype-name{font-size:clamp(3.2rem,14vw,5rem)}
+  .hero-desc{max-width:100%}
+
+  .about{grid-template-columns:1fr;padding:var(--gap-md) var(--side)}
+  .watermark{display:none}
+  .stats{gap:clamp(16px,5vw,32px)}
+
+  .products{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+
+  .trust-grid{grid-template-columns:1fr}
+  .trust{padding:var(--gap-md) var(--side)}
+
+  .contact{grid-template-columns:1fr}
+  .contact-right{display:none}
+
+  footer{flex-direction:column;align-items:flex-start}
+  .f-links{flex-wrap:wrap}
+}
+
+@media(max-width:480px){
+  .steps{grid-template-columns:1fr}
+  .cta-row{flex-direction:column;align-items:flex-start}
+  .col-head{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<div class="mob-menu" id="mobMenu">
+  <a href="#about" onclick="closeMob()">About</a>
+  <a href="#collection" onclick="closeMob()">Collection</a>
+  <a href="#process" onclick="closeMob()">Method</a>
+  <a href="#contact" onclick="closeMob()">Order</a>
+</div>
+
+<nav id="nav">
+  <a href="#" class="nav-logo">RE<span class="apos">'</span>NOIR</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#collection">Collection</a></li>
+    <li><a href="#process">Method</a></li>
+  </ul>
+  <a href="#contact" class="nav-order">Order Now</a>
+  <div class="nav-ham" id="navHam" onclick="toggleMob()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-left">
+    <div class="eyebrow">Handcrafted in Sri Lanka</div>
+    <div class="logotype">
+      <div class="logotype-name">RE<span class="apos">'</span>NOIR</div>
+      <div class="rule-wrap">
+        <div class="rule"></div>
+        <div class="tagline-txt">Blended To Be Perfect</div>
+        <div class="rule r"></div>
+      </div>
+    </div>
+    <p class="hero-desc">
+      Not an imitation. Not a copy.<br>
+      <strong>A new standard.</strong><br>
+      Precision-blended fragrance with genuine designer oil — in a pocket-sized 10ml spray made for those who know the difference.
+    </p>
+    <div class="cta-row">
+      <a href="#contact" class="btn-fill">Claim Your Bottle</a>
+      <a href="#collection" class="btn-ghost">See the collection</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="bottle-wrap">
+      <div class="bottle-glow"></div>
+      <svg width="clamp(140px,18vw,220px)" height="clamp(240px,30vw,370px)" viewBox="0 0 180 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="bodyGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#3d1854"/>
+            <stop offset="50%" stop-color="#2D0E3B"/>
+            <stop offset="100%" stop-color="#1a0824"/>
+          </linearGradient>
+          <linearGradient id="capGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#d4751f"/>
+            <stop offset="100%" stop-color="#8a3d0a"/>
+          </linearGradient>
+          <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(235,230,222,0.12)"/>
+            <stop offset="40%" stop-color="rgba(235,230,222,0.04)"/>
+            <stop offset="100%" stop-color="rgba(235,230,222,0)"/>
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <rect x="68" y="12" width="44" height="16" rx="5" fill="url(#capGrad)"/>
+        <rect x="76" y="28" width="28" height="20" rx="4" fill="#3d1854"/>
+        <rect x="30" y="48" width="120" height="228" rx="18" fill="url(#bodyGrad)" stroke="rgba(183,110,121,.18)" stroke-width="1"/>
+        <rect x="30" y="48" width="28" height="228" rx="18" fill="url(#sheen)"/>
+        <rect x="44" y="86" width="92" height="130" rx="6" fill="rgba(235,230,222,.04)" stroke="rgba(196,94,26,.22)" stroke-width=".8"/>
+        <line x1="54" y1="100" x2="126" y2="100" stroke="#C45E1A" stroke-width=".8" opacity=".7"/>
+        <text x="90" y="136" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="rgba(235,230,222,.82)" letter-spacing="4">RE</text>
+        <text x="90" y="136" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="rgba(235,230,222,.82)" letter-spacing="4" dx="26">'</text>
+        <text x="90" y="136" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#C45E1A" letter-spacing="0" dx="3">&#8203;</text>
+        <text x="90" y="138" text-anchor="middle" font-family="Georgia,serif" font-size="11.5" fill="rgba(235,230,222,.8)" letter-spacing="3.5">RE'NOIR</text>
+        <text x="90" y="155" text-anchor="middle" font-family="Georgia,serif" font-size="5.5" fill="rgba(196,94,26,.75)" letter-spacing="2.5">BLENDED TO BE PERFECT</text>
+        <line x1="54" y1="200" x2="126" y2="200" stroke="#C45E1A" stroke-width=".8" opacity=".7"/>
+        <rect x="82" y="4" width="16" height="12" rx="3" fill="#C45E1A" opacity=".7" filter="url(#glow)"/>
+        <ellipse cx="52" cy="100" rx="6" ry="20" fill="rgba(235,230,222,.06)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    <span class="marquee-item">10ml Glass Spray<span class="dot">✦</span></span>
+    <span class="marquee-item">Handcrafted in Sri Lanka<span class="dot">✦</span></span>
+    <span class="marquee-item">Genuine Designer Oil<span class="dot">✦</span></span>
+    <span class="marquee-item">Rs. 4,500<span class="dot">✦</span></span>
+    <span class="marquee-item">Limited Batch<span class="dot">✦</span></span>
+    <span class="marquee-item">DM to Order<span class="dot">✦</span></span>
+    <span class="marquee-item">10ml Glass Spray<span class="dot">✦</span></span>
+    <span class="marquee-item">Handcrafted in Sri Lanka<span class="dot">✦</span></span>
+    <span class="marquee-item">Genuine Designer Oil<span class="dot">✦</span></span>
+    <span class="marquee-item">Rs. 4,500<span class="dot">✦</span></span>
+    <span class="marquee-item">Limited Batch<span class="dot">✦</span></span>
+    <span class="marquee-item">DM to Order<span class="dot">✦</span></span>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="watermark">RE'NOIR</div>
+  <div class="reveal">
+    <p class="sec-label">Our Story</p>
+    <h2 class="sec-title on-light">Not a copy.<br><em>An evolution.</em></h2>
+    <p class="sec-body-light">RE'NOIR was built on one belief — that wearing a world-class fragrance shouldn't cost you a week's salary. We source our oils from Dubai's finest perfumers and marry them with authentic designer fragrance to create something that stands entirely on its own.</p>
+    <p class="sec-body-light">Every bottle is measured by hand. Every blend is tested before it ships. Nothing synthetic. Nothing compromised.</p>
+    <div class="stats">
+      <div>
+        <div class="stat-n">10<span>ml</span></div>
+        <div class="stat-l">Glass Spray</div>
+      </div>
+      <div>
+        <div class="stat-n">3<span>+</span></div>
+        <div class="stat-l">Signature Blends</div>
+      </div>
+      <div>
+        <div class="stat-n">0<span>%</span></div>
+        <div class="stat-l">Compromise</div>
+      </div>
+    </div>
+  </div>
+  <div class="cards-stack reveal" style="transition-delay:.15s">
+    <div class="acard">
+      <span class="ac-icon">✦</span>
+      <div class="ac-title">Dubai-Sourced Master Oils</div>
+      <div class="ac-text">Our base oils come from Dubai's finest master perfumers — artisans who have spent decades perfecting the world's most beloved scents. Each oil is imported to order.</div>
+    </div>
+    <div class="acard">
+      <span class="ac-icon">◈</span>
+      <div class="ac-title">Genuine by Design</div>
+      <div class="ac-text">We blend in real authentic designer fragrance. The genuine extract is what you smell on first spray — the reason every RE'NOIR bottle is unlike anything else at this price.</div>
+    </div>
+    <div class="acard">
+      <span class="ac-icon">◇</span>
+      <div class="ac-title">Glass. Always.</div>
+      <div class="ac-text">Every RE'NOIR ships in a 10ml glass atomizer with a precision pump. Because a fragrance worth wearing deserves a bottle worth keeping.</div>
+    </div>
+  </div>
+</section>
+
+<div class="scarcity">
+  <div class="scarcity-dot"></div>
+  <div class="scarcity-txt">First batch —</div>
+  <div class="scarcity-num">Limited bottles available</div>
+  <div class="scarcity-dot"></div>
+  <div class="scarcity-txt">DM <strong>@renoir.perfume</strong> to reserve yours</div>
+  <div class="scarcity-dot"></div>
+</div>
+
+<section class="collection" id="collection">
+  <div class="col-head reveal">
+    <div>
+      <p class="sec-label">The Collection</p>
+      <h2 class="sec-title on-dark">Signature <em>Blends</em></h2>
+    </div>
+    <a href="#contact" class="btn-line">Order Now →</a>
+  </div>
+  <div class="products">
+    <div class="pcard reveal">
+      <div class="p-num">No. 01</div>
+      <div class="p-bottle">
+        <svg width="56" height="96" viewBox="0 0 56 96" fill="none">
+          <defs><linearGradient id="pb1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#554C5B"/><stop offset="100%" stop-color="#2D0E3B"/></linearGradient></defs>
+          <rect x="20" y="4" width="16" height="6" rx="2" fill="#C45E1A" opacity=".85"/>
+          <rect x="22" y="10" width="12" height="7" rx="2" fill="#554C5B"/>
+          <rect x="8" y="17" width="40" height="72" rx="7" fill="url(#pb1)" stroke="rgba(183,110,121,.22)" stroke-width=".8"/>
+          <rect x="14" y="28" width="28" height="44" rx="3" fill="rgba(235,230,222,.04)" stroke="rgba(196,94,26,.24)" stroke-width=".6"/>
+          <text x="28" y="53" text-anchor="middle" font-family="serif" font-size="5" fill="rgba(235,230,222,.78)" letter-spacing="1.5">NOIR I</text>
+        </svg>
+      </div>
+      <div class="p-name">Noir I</div>
+      <div class="p-sub">Fresh · Woody · Amber</div>
+      <div class="p-desc">Bold citrus opens into dark woods and warm amber. Versatile, powerful, and unmistakably present. Made for the one who walks into a room and owns it.</div>
+      <div class="p-foot">
+        <div class="p-price"><small>10ml Spray</small><b>Rs. 4,500</b></div>
+        <a href="#contact" class="p-btn">→</a>
+      </div>
+    </div>
+
+    <div class="pcard reveal" style="transition-delay:.1s">
+      <div class="p-num">No. 02</div>
+      <div class="p-bottle">
+        <svg width="56" height="96" viewBox="0 0 56 96" fill="none">
+          <defs><linearGradient id="pb2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4a3d52"/><stop offset="100%" stop-color="#2D0E3B"/></linearGradient></defs>
+          <rect x="20" y="4" width="16" height="6" rx="2" fill="#C45E1A" opacity=".85"/>
+          <rect x="22" y="10" width="12" height="7" rx="2" fill="#554C5B"/>
+          <rect x="8" y="17" width="40" height="72" rx="7" fill="url(#pb2)" stroke="rgba(183,110,121,.22)" stroke-width=".8"/>
+          <rect x="14" y="28" width="28" height="44" rx="3" fill="rgba(235,230,222,.04)" stroke="rgba(196,94,26,.24)" stroke-width=".6"/>
+          <text x="28" y="53" text-anchor="middle" font-family="serif" font-size="4.5" fill="rgba(235,230,222,.78)" letter-spacing="1">NOIR II</text>
+        </svg>
+      </div>
+      <div class="p-name">Noir II</div>
+      <div class="p-sub">Smoky · Fruited · Musk</div>
+      <div class="p-desc">Blackcurrant and smoky birch over a deep musk base. The fragrance of ambition — complex, unforgettable, made accessible without a single compromise.</div>
+      <div class="p-foot">
+        <div class="p-price"><small>10ml Spray</small><b>Rs. 4,500</b></div>
+        <a href="#contact" class="p-btn">→</a>
+      </div>
+    </div>
+
+    <div class="pcard reveal" style="transition-delay:.2s">
+      <div class="p-num">No. 03</div>
+      <div class="p-bottle">
+        <svg width="56" height="96" viewBox="0 0 56 96" fill="none">
+          <defs><linearGradient id="pb3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#5c4460"/><stop offset="100%" stop-color="#2D0E3B"/></linearGradient></defs>
+          <rect x="20" y="4" width="16" height="6" rx="2" fill="#C45E1A" opacity=".85"/>
+          <rect x="22" y="10" width="12" height="7" rx="2" fill="#554C5B"/>
+          <rect x="8" y="17" width="40" height="72" rx="7" fill="url(#pb3)" stroke="rgba(183,110,121,.22)" stroke-width=".8"/>
+          <rect x="14" y="28" width="28" height="44" rx="3" fill="rgba(235,230,222,.04)" stroke="rgba(196,94,26,.24)" stroke-width=".6"/>
+          <text x="28" y="53" text-anchor="middle" font-family="serif" font-size="4" fill="rgba(235,230,222,.78)" letter-spacing="1">NOIR III</text>
+        </svg>
+      </div>
+      <div class="p-name">Noir III</div>
+      <div class="p-sub">Spiced · Warm · Magnetic</div>
+      <div class="p-desc">Cardamom and tonka bean with a dry amber finish. Built for evenings. Bold enough to remember, refined enough to wear anywhere that counts.</div>
+      <div class="p-foot">
+        <div class="p-price"><small>10ml Spray</small><b>Rs. 4,500</b></div>
+        <a href="#contact" class="p-btn">→</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="process-inner reveal">
+    <p class="sec-label">The Method</p>
+    <h2 class="sec-title on-light">How we <em>blend</em></h2>
+  </div>
+  <div class="steps">
+    <div class="step reveal">
+      <div class="step-n">I</div>
+      <div class="step-t">Source</div>
+      <div class="step-d">We import master-grade fragrance oils from Dubai's finest perfumers — craftsmen who have spent decades in the art of scent.</div>
+    </div>
+    <div class="step reveal" style="transition-delay:.1s">
+      <div class="step-n">II</div>
+      <div class="step-t">Acquire</div>
+      <div class="step-d">We source verified authentic designer fragrances from Sri Lanka's certified retailers. These form the genuine extract in every RE'NOIR blend.</div>
+    </div>
+    <div class="step reveal" style="transition-delay:.2s">
+      <div class="step-n">III</div>
+      <div class="step-t">Blend</div>
+      <div class="step-d">Dubai master oil meets authentic designer extract. Measured precisely. Mixed by hand. Tested before every bottle is filled.</div>
+    </div>
+    <div class="step reveal" style="transition-delay:.3s">
+      <div class="step-n">IV</div>
+      <div class="step-t">Bottle</div>
+      <div class="step-d">Filled into 10ml glass atomizers. Sealed, labelled, and ready. Every bottle is a finished product — not an experiment.</div>
+    </div>
+  </div>
+</section>
+
+<section class="trust reveal">
+  <div class="trust-head">Why RE'NOIR is different</div>
+  <div class="trust-grid">
+    <div class="trust-item">
+      <div class="trust-icon">◈</div>
+      <div class="trust-val">10<span>ml</span></div>
+      <div class="trust-lbl">Glass Atomizer</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">✦</div>
+      <div class="trust-val">3</div>
+      <div class="trust-lbl">Signature Blends</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">◇</div>
+      <div class="trust-val">100<span>%</span></div>
+      <div class="trust-lbl">Handcrafted</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="reveal">
+    <p class="sec-label">Order Now</p>
+    <h2 class="sec-title on-dark">Ready to smell<br><em>unforgettable?</em></h2>
+    <p class="contact-sub">RE'NOIR is available via Instagram and WhatsApp. DM us to order, ask about a scent, or reserve a bottle from our first batch before they're gone.</p>
+    <div class="c-links">
+      <a href="https://instagram.com/renoir.perfume" class="c-link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <span class="c-link-txt">@renoir.perfume</span>
+        <span class="c-link-arrow">→</span>
+      </a>
+      <a href="mailto:renoirperfumeceylon@gmail.com" class="c-link">
+        <svg viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+        <span class="c-link-txt">renoirperfumeceylon@gmail.com</span>
+        <span class="c-link-arrow">→</span>
+      </a>
+    </div>
+    <p class="contact-note">First batch is limited. Once sold out, production resumes on request only.</p>
+  </div>
+  <div class="contact-right reveal" style="transition-delay:.15s">
+    <div class="pull-quote">"The first spray<br>tells you everything<br>you need to <em>know.</em>"</div>
+    <div class="pull-attr">RE'NOIR · Sri Lanka · Est. 2025</div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">RE<span>'</span>NOIR</div>
+  <div class="f-copy">© 2025 RE'NOIR. All rights reserved. Sri Lanka.</div>
+  <div class="f-links">
+    <a href="#collection">Collection</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60),{passive:true});
+
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}});
+},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+function toggleMob(){
+  const m=document.getElementById('mobMenu');
+  const h=document.getElementById('navHam');
+  const open=m.classList.toggle('open');
+  h.classList.toggle('open',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+function closeMob(){
+  document.getElementById('mobMenu').classList.remove('open');
+  document.getElementById('navHam').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+  });
+});
+</script>
+</body>
+</html>
