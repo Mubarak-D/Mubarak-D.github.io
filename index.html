@@ -4,12 +4,20 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0"/>
 <meta name="color-scheme" content="only light"/>
-<meta name="description" content="RE'NOIR — Handcrafted fragrance blends from Sri Lanka. Genuine designer oil, perfected by hand. 10ml spray from Rs. 4,500."/>
-<title>RE'NOIR — Blended To Be Perfect</title>
+<meta name="description" content="RE'NOIR crafts premium inspired fragrances in Sri Lanka with genuine designer extract and Dubai-sourced master oils. 10ml glass sprays from Rs. 4,500."/>
+<link rel="canonical" href="https://renoirperfumes.me/"/>
+<title>RE'NOIR | Inspired Fragrances Sri Lanka</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{color-scheme:only light;scroll-behavior:smooth}
+
+.sr-only{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
 
 :root{
   --cream:#EBE6DE;
@@ -379,6 +387,30 @@ nav.scrolled{
 .trust-val span{color:#C45E1A}
 .trust-lbl{font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(235,230,222,.4)}
 
+.faq{
+  background:#2D0E3B;
+  padding:clamp(60px,8vw,100px) var(--side);
+}
+.faq-inner{max-width:760px;margin:0 auto}
+.faq-list{border-top:1px solid rgba(196,94,26,.18)}
+.faq-item{
+  border-bottom:1px solid rgba(196,94,26,.18);
+  padding:24px 0;
+}
+.faq-item:last-child{border-bottom:0}
+.faq-item summary{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.1rem;color:#EBE6DE;cursor:pointer;
+  list-style:none;display:flex;justify-content:space-between;align-items:center;
+  letter-spacing:.04em;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary span{color:#C45E1A;font-size:1.2rem;flex-shrink:0;margin-left:16px}
+.faq-item p{
+  font-size:.82rem;line-height:2;color:rgba(235,230,222,.52);
+  margin-top:16px;
+}
+
 .scarcity{
   background:#C45E1A;
   padding:16px var(--side);
@@ -496,6 +528,145 @@ footer{
   .col-head{flex-direction:column;align-items:flex-start}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://renoirperfumes.me/#organization",
+      "name": "RE'NOIR",
+      "url": "https://renoirperfumes.me/",
+      "description": "RE'NOIR crafts premium inspired fragrances in Sri Lanka with genuine designer extract and Dubai-sourced master oils.",
+      "foundingDate": "2025",
+      "foundingLocation": "Colombo, Sri Lanka",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "renoirperfumeceylon@gmail.com"
+      },
+      "sameAs": [
+        "https://instagram.com/renoir.perfume"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://renoirperfumes.me/#website",
+      "url": "https://renoirperfumes.me/",
+      "name": "RE'NOIR",
+      "description": "Premium inspired fragrances handcrafted in Sri Lanka",
+      "publisher": {
+        "@id": "https://renoirperfumes.me/#organization"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "RE'NOIR Noir I Inspired Fragrance Spray",
+      "description": "Fresh citrus opens into bold woods and warm amber. A premium inspired fragrance blended with genuine designer extract in a 10ml glass atomizer spray.",
+      "brand": {
+        "@type": "Brand",
+        "name": "RE'NOIR"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "4500",
+        "priceCurrency": "LKR",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@id": "https://renoirperfumes.me/#organization"
+        }
+      },
+      "material": "Glass atomizer spray bottle, 10ml",
+      "category": "Fragrance"
+    },
+    {
+      "@type": "Product",
+      "name": "RE'NOIR Noir II Inspired Fragrance Spray",
+      "description": "Blackcurrant and smoky birch over a deep musk base. A premium inspired fragrance blended with genuine designer extract in a 10ml glass atomizer spray.",
+      "brand": {
+        "@type": "Brand",
+        "name": "RE'NOIR"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "4500",
+        "priceCurrency": "LKR",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@id": "https://renoirperfumes.me/#organization"
+        }
+      },
+      "material": "Glass atomizer spray bottle, 10ml",
+      "category": "Fragrance"
+    },
+    {
+      "@type": "Product",
+      "name": "RE'NOIR Noir III Inspired Fragrance Spray",
+      "description": "Cardamom and tonka bean with a dry amber finish. A premium inspired fragrance blended with genuine designer extract in a 10ml glass atomizer spray.",
+      "brand": {
+        "@type": "Brand",
+        "name": "RE'NOIR"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "4500",
+        "priceCurrency": "LKR",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@id": "https://renoirperfumes.me/#organization"
+        }
+      },
+      "material": "Glass atomizer spray bottle, 10ml",
+      "category": "Fragrance"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an inspired fragrance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An inspired fragrance is an original blend crafted to evoke the character and scent family of a well-known designer perfume. RE'NOIR blends Dubai-sourced master oils with genuine designer extract, so every bottle is built around real fragrance character rather than a flat synthetic copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does RE'NOIR fragrance last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RE'NOIR fragrances are concentrated oil-forward blends designed for strong presence and lasting wear. Longevity depends on skin type, weather, and the specific blend, but each bottle is tested before release."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I order RE'NOIR in Sri Lanka?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RE'NOIR is available via Instagram DM at @renoir.perfume and by email at renoirperfumeceylon@gmail.com. First batch quantities are limited, so DM to check current availability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the price of RE'NOIR perfume?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All RE'NOIR fragrances are priced at Rs. 4,500 for a 10ml glass atomizer spray. This includes Noir I, Noir II, and Noir III from the debut collection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is RE'NOIR made in Sri Lanka?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. RE'NOIR is handcrafted in Sri Lanka using master-grade fragrance oils imported from Dubai and authentic designer extracts sourced from verified Sri Lankan retailers. Every bottle is hand-measured and hand-filled locally."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -518,6 +689,8 @@ footer{
     <span></span><span></span><span></span>
   </div>
 </nav>
+
+<h1 class="sr-only">Luxury Inspired Fragrances Sri Lanka — RE'NOIR</h1>
 
 <section class="hero" id="home">
   <div class="hero-bg"></div>
@@ -771,6 +944,35 @@ footer{
       <div class="trust-icon">◇</div>
       <div class="trust-val">100<span>%</span></div>
       <div class="trust-lbl">Handcrafted</div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="faq-inner reveal">
+    <p class="sec-label">Questions</p>
+    <h2 class="sec-title on-dark">What people <em>ask</em></h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What is an inspired fragrance?<span>+</span></summary>
+        <p>An inspired fragrance is an original blend crafted to evoke the character and scent family of a well-known designer perfume. RE'NOIR blends Dubai-sourced master oils with genuine designer extract, so every bottle is built around real fragrance character rather than a flat synthetic copy.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How long does RE'NOIR fragrance last?<span>+</span></summary>
+        <p>RE'NOIR fragrances are concentrated oil-forward blends designed for strong presence and lasting wear. Longevity depends on skin type, weather, and the specific blend, but each bottle is tested before release.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I order RE'NOIR in Sri Lanka?<span>+</span></summary>
+        <p>RE'NOIR is available via Instagram DM at @renoir.perfume and by email at renoirperfumeceylon@gmail.com. First batch quantities are limited, so DM to check current availability.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is the price of RE'NOIR perfume?<span>+</span></summary>
+        <p>All RE'NOIR fragrances are priced at Rs. 4,500 for a 10ml glass atomizer spray. This includes Noir I, Noir II, and Noir III from the debut collection.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is RE'NOIR made in Sri Lanka?<span>+</span></summary>
+        <p>Yes. RE'NOIR is handcrafted in Sri Lanka using master-grade fragrance oils imported from Dubai and authentic designer extracts sourced from verified Sri Lankan retailers. Every bottle is hand-measured and hand-filled locally.</p>
+      </details>
     </div>
   </div>
 </section>
