@@ -4,18 +4,18 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0"/>
 <meta name="color-scheme" content="only light"/>
-<meta name="description" content="RE'NOIR crafts premium inspired fragrances in Sri Lanka with rare, master-blended oils. 10ml glass sprays from Rs. 4,500."/>
+<meta name="description" content="RE'NOIR crafts premium inspired fragrances in Sri Lanka with rare, master-blended oils. 10ml glass sprays from Rs. 3,399."/>
 <link rel="canonical" href="https://renoirperfumes.me/"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://renoirperfumes.me/"/>
 <meta property="og:title" content="RE'NOIR | Inspired Fragrances Sri Lanka"/>
-<meta property="og:description" content="Premium inspired fragrances blended with rare, master-grade oils. 10ml glass sprays from Rs. 4,500. Handcrafted in Sri Lanka."/>
+<meta property="og:description" content="Premium inspired fragrances blended with rare, master-grade oils. 10ml glass sprays from Rs. 3,399. Handcrafted in Sri Lanka."/>
 <meta property="og:image" content="https://renoirperfumes.me/og-image.jpg"/>
 <meta property="og:locale" content="en_LK"/>
 <meta property="og:site_name" content="RE'NOIR"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="RE'NOIR | Inspired Fragrances Sri Lanka"/>
-<meta name="twitter:description" content="Premium inspired fragrances blended with rare, master-grade oils. 10ml glass sprays from Rs. 4,500."/>
+<meta name="twitter:description" content="Premium inspired fragrances blended with rare, master-grade oils. 10ml glass sprays from Rs. 3,399."/>
 <meta name="twitter:image" content="https://renoirperfumes.me/og-image.jpg"/>
 <title>RE'NOIR | Inspired Fragrances Sri Lanka</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -291,7 +291,7 @@ nav.scrolled{
 
 .products{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(4,minmax(0,1fr));
   gap:clamp(16px,2vw,24px);
 }
 .pcard{
@@ -325,7 +325,17 @@ nav.scrolled{
 }
 .p-desc{
   font-size:.8rem;line-height:1.95;
-  color:rgba(235,230,222,.44);flex:1;margin-bottom:clamp(20px,3vw,32px);
+  color:rgba(235,230,222,.44);margin-bottom:clamp(14px,2vw,20px);
+}
+.p-notes{
+  display:grid;gap:7px;margin-bottom:clamp(14px,2vw,20px);
+  font-size:.66rem;line-height:1.65;color:rgba(235,230,222,.42);
+}
+.p-notes span{display:block}
+.p-meta{
+  display:grid;gap:6px;margin-bottom:clamp(20px,3vw,32px);
+  font-size:.6rem;line-height:1.7;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(235,230,222,.34);
 }
 .p-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
 .p-price{display:flex;flex-direction:column}
@@ -336,6 +346,20 @@ nav.scrolled{
 .p-price b{
   font-family:'Cormorant Garamond',serif;font-size:1.4rem;
   font-weight:300;color:#EBE6DE;
+}
+.p-price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.p-price-old{
+  font-family:'Cormorant Garamond',serif;font-size:1.05rem;
+  color:rgba(235,230,222,.34);text-decoration:line-through;
+  text-decoration-color:#C45E1A;text-decoration-thickness:2px;
+}
+.p-price-new{
+  font-family:'Cormorant Garamond',serif;font-size:1.5rem;
+  font-weight:300;color:#EBE6DE;
+}
+.discount-badge{
+  margin-top:4px;font-size:.5rem;letter-spacing:.16em;
+  text-transform:uppercase;color:#C45E1A;
 }
 .p-btn{
   width:40px;height:40px;border:1px solid rgba(196,94,26,.4);
@@ -555,10 +579,12 @@ footer{
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "email": "renoirperfumeceylon@gmail.com"
+        "email": "renoirperfumeceylon@gmail.com",
+        "telephone": "+94704427371"
       },
       "sameAs": [
-        "https://instagram.com/renoir.perfume"
+        "https://instagram.com/renoir.perfume",
+        "https://wa.me/message/GRUMA6R4S467O1"
       ]
     },
     {
@@ -573,15 +599,15 @@ footer{
     },
     {
       "@type": "Product",
-      "name": "RE'NOIR Noir I Inspired Fragrance Spray",
-      "description": "Fresh citrus opens into bold woods and warm amber. A premium inspired fragrance blended with rare, master-grade oils in a 10ml glass atomizer spray.",
+      "name": "RE'NOIR Noir I Inspired by Dior Sauvage",
+      "description": "Raw, wild and unmistakable. Noir I opens with Calabrian bergamot, then settles into Sichuan pepper, lavender, star anise, ambroxan and vanilla.",
       "brand": {
         "@type": "Brand",
         "name": "RE'NOIR"
       },
       "offers": {
         "@type": "Offer",
-        "price": "4500",
+        "price": "3399",
         "priceCurrency": "LKR",
         "availability": "https://schema.org/InStock",
         "seller": {
@@ -593,15 +619,15 @@ footer{
     },
     {
       "@type": "Product",
-      "name": "RE'NOIR Noir II Inspired Fragrance Spray",
-      "description": "Blackcurrant and smoky birch over a deep musk base. A premium inspired fragrance blended with rare, master-grade oils in a 10ml glass atomizer spray.",
+      "name": "RE'NOIR Noir II Inspired by Creed Aventus",
+      "description": "Bright pineapple, apple and bergamot transition into smoky birch, patchouli, oakmoss, cedarwood, musk and ambroxan.",
       "brand": {
         "@type": "Brand",
         "name": "RE'NOIR"
       },
       "offers": {
         "@type": "Offer",
-        "price": "4500",
+        "price": "3399",
         "priceCurrency": "LKR",
         "availability": "https://schema.org/InStock",
         "seller": {
@@ -613,15 +639,35 @@ footer{
     },
     {
       "@type": "Product",
-      "name": "RE'NOIR Noir III Inspired Fragrance Spray",
-      "description": "Cardamom and tonka bean with a dry amber finish. A premium inspired fragrance blended with rare, master-grade oils in a 10ml glass atomizer spray.",
+      "name": "RE'NOIR Noir III Inspired by Azzaro Most Wanted",
+      "description": "Dark, addictive and smooth. Cardamom and ginger melt into toffee, woodsy notes, bourbon vanilla and amberwood.",
       "brand": {
         "@type": "Brand",
         "name": "RE'NOIR"
       },
       "offers": {
         "@type": "Offer",
-        "price": "4500",
+        "price": "3399",
+        "priceCurrency": "LKR",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@id": "https://renoirperfumes.me/#organization"
+        }
+      },
+      "material": "Glass atomizer spray bottle, 10ml",
+      "category": "Fragrance"
+    },
+    {
+      "@type": "Product",
+      "name": "RE'NOIR Noir IV Inspired by Baccarat Rouge 540",
+      "description": "Warm, woody and ambery. Noir IV opens with saffron and jasmine before evolving into amberwood, hedione, cedar, fir resin, ambroxan and sugar.",
+      "brand": {
+        "@type": "Brand",
+        "name": "RE'NOIR"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "4249",
         "priceCurrency": "LKR",
         "availability": "https://schema.org/InStock",
         "seller": {
@@ -639,7 +685,7 @@ footer{
           "name": "What is an inspired fragrance?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "An inspired fragrance is an original blend crafted to evoke the character and scent family of a well-known designer perfume. RE'NOIR blends rare master-grade oils with rare master-grade oils, so every bottle is built around real fragrance character rather than a flat synthetic copy."
+            "text": "An inspired fragrance is an original blend crafted to evoke the character and scent family of a well-known designer perfume. RE'NOIR uses rare master-grade oils, so every bottle is built around real fragrance character rather than a flat synthetic copy."
           }
         },
         {
@@ -655,7 +701,7 @@ footer{
           "name": "How do I order RE'NOIR in Sri Lanka?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "RE'NOIR is available via Instagram DM at @renoir.perfume and by email at renoirperfumeceylon@gmail.com. First batch quantities are limited, so DM to check current availability."
+            "text": "RE'NOIR is available via Instagram DM at @renoir.perfume, WhatsApp at 0704427371, and email at renoirperfumeceylon@gmail.com. First batch quantities are limited, so message us to check current availability."
           }
         },
         {
@@ -663,7 +709,7 @@ footer{
           "name": "What is the price of RE'NOIR perfume?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "All RE'NOIR fragrances are priced at Rs. 4,500 for a 10ml glass atomizer spray. This includes Noir I, Noir II, and Noir III from the debut collection."
+            "text": "Noir I, Noir II and Noir III are discounted from Rs. 4,000 to Rs. 3,399. Noir IV is discounted from Rs. 5,000 to Rs. 4,249. All bottles are 10ml glass atomizer sprays."
           }
         },
         {
@@ -719,7 +765,7 @@ footer{
     <p class="hero-desc">
       Not an imitation. Not a copy.<br>
       <strong>A new standard.</strong><br>
-      Precision-blended fragrance with genuine designer oil — in a pocket-sized 10ml spray made for those who know the difference.
+      Precision-blended fragrance oils in a pocket-sized 10ml spray made for those who know the difference.
     </p>
     <div class="cta-row">
       <a href="#contact" class="btn-fill">Claim Your Bottle</a>
@@ -770,14 +816,14 @@ footer{
   <div class="marquee-inner">
     <span class="marquee-item">10ml Glass Spray<span class="dot">✦</span></span>
     <span class="marquee-item">Handcrafted in Sri Lanka<span class="dot">✦</span></span>
-    <span class="marquee-item">Genuine Designer Oil<span class="dot">✦</span></span>
-    <span class="marquee-item">Rs. 4,500<span class="dot">✦</span></span>
+    <span class="marquee-item">Rare Master-Grade Oils<span class="dot">✦</span></span>
+    <span class="marquee-item">From Rs. 3,399<span class="dot">✦</span></span>
     <span class="marquee-item">Limited Batch<span class="dot">✦</span></span>
     <span class="marquee-item">DM to Order<span class="dot">✦</span></span>
     <span class="marquee-item">10ml Glass Spray<span class="dot">✦</span></span>
     <span class="marquee-item">Handcrafted in Sri Lanka<span class="dot">✦</span></span>
-    <span class="marquee-item">Genuine Designer Oil<span class="dot">✦</span></span>
-    <span class="marquee-item">Rs. 4,500<span class="dot">✦</span></span>
+    <span class="marquee-item">Rare Master-Grade Oils<span class="dot">✦</span></span>
+    <span class="marquee-item">From Rs. 3,399<span class="dot">✦</span></span>
     <span class="marquee-item">Limited Batch<span class="dot">✦</span></span>
     <span class="marquee-item">DM to Order<span class="dot">✦</span></span>
   </div>
@@ -788,7 +834,7 @@ footer{
   <div class="reveal">
     <p class="sec-label">Our Story</p>
     <h2 class="sec-title on-light">Not a copy.<br><em>An evolution.</em></h2>
-    <p class="sec-body-light">RE'NOIR was built on one belief — that wearing a world-class fragrance shouldn't cost you a week's salary. We source our oils from one of the world's finest perfumers and marry them with authentic designer fragrance to create something that stands entirely on its own.</p>
+    <p class="sec-body-light">RE'NOIR was built on one belief — that wearing a world-class fragrance shouldn't cost you a week's salary. We source our oils from one of the world's finest perfumers and blend them by hand into fragrances that stand entirely on their own.</p>
     <p class="sec-body-light">Every bottle is measured by hand. Every blend is tested before it ships. Nothing synthetic. Nothing compromised.</p>
     <div class="stats">
       <div>
@@ -796,7 +842,7 @@ footer{
         <div class="stat-l">Glass Spray</div>
       </div>
       <div>
-        <div class="stat-n">3<span>+</span></div>
+        <div class="stat-n">4</div>
         <div class="stat-l">Signature Blends</div>
       </div>
       <div>
@@ -813,8 +859,8 @@ footer{
     </div>
     <div class="acard">
       <span class="ac-icon">◈</span>
-      <div class="ac-title">Genuine by Design</div>
-      <div class="ac-text">We blend in real authentic designer fragrance. The genuine extract is what you smell on first spray — the reason every RE'NOIR bottle is unlike anything else at this price.</div>
+      <div class="ac-title">Built by Design</div>
+      <div class="ac-text">Each blend is balanced around a clear scent profile, measured carefully, and tested before release — the reason every RE'NOIR bottle feels finished, not improvised.</div>
     </div>
     <div class="acard">
       <span class="ac-icon">◇</span>
@@ -855,10 +901,19 @@ footer{
         </svg>
       </div>
       <div class="p-name">Noir I</div>
-      <div class="p-sub">Fresh · Woody · Amber</div>
-      <div class="p-desc">Bold citrus opens into dark woods and warm amber. Versatile, powerful, and unmistakably present. Made for the one who walks into a room and owns it.</div>
+      <div class="p-sub">Inspired by Dior Sauvage</div>
+      <div class="p-desc">Raw. Wild. Unmistakable. Noir I opens with a burst of Calabrian bergamot before settling into Sichuan pepper, lavender and star anise. The dry-down is ambroxan and vanilla.</div>
+      <div class="p-notes">
+        <span>Top: Bergamot, Pepper</span>
+        <span>Heart: Lavender, Star Anise, Nutmeg</span>
+        <span>Base: Ambroxan, Vanilla</span>
+      </div>
+      <div class="p-meta">
+        <span>Day to night · Office to evening · All seasons</span>
+        <span>Bold · Fresh · Masculine</span>
+      </div>
       <div class="p-foot">
-        <div class="p-price"><small>10ml Spray</small><b>Rs. 4,500</b></div>
+        <div class="p-price"><small>10ml Spray · 15% Off</small><div class="p-price-row"><span class="p-price-old">Rs. 4,000</span><span class="p-price-new">Rs. 3,399</span></div><span class="discount-badge">Limited batch price</span></div>
         <a href="#contact" class="p-btn">→</a>
       </div>
     </div>
@@ -876,10 +931,19 @@ footer{
         </svg>
       </div>
       <div class="p-name">Noir II</div>
-      <div class="p-sub">Smoky · Fruited · Musk</div>
-      <div class="p-desc">Blackcurrant and smoky birch over a deep musk base. The fragrance of ambition — complex, unforgettable, made accessible without a single compromise.</div>
+      <div class="p-sub">Inspired by Creed Aventus</div>
+      <div class="p-desc">Built for men who don't need to announce themselves. Noir II opens with pineapple, apple and bergamot before transitioning into smoky birch and warm patchouli.</div>
+      <div class="p-notes">
+        <span>Top: Pineapple, Bergamot, Blackcurrant, Apple</span>
+        <span>Heart: Birch, Patchouli, Jasmine</span>
+        <span>Base: Oakmoss, Cedarwood, Musk, Ambroxan</span>
+      </div>
+      <div class="p-meta">
+        <span>Formal · Date night · Statement events</span>
+        <span>Smoky · Fruity · Commanding</span>
+      </div>
       <div class="p-foot">
-        <div class="p-price"><small>10ml Spray</small><b>Rs. 4,500</b></div>
+        <div class="p-price"><small>10ml Spray · 15% Off</small><div class="p-price-row"><span class="p-price-old">Rs. 4,000</span><span class="p-price-new">Rs. 3,399</span></div><span class="discount-badge">Limited batch price</span></div>
         <a href="#contact" class="p-btn">→</a>
       </div>
     </div>
@@ -897,10 +961,49 @@ footer{
         </svg>
       </div>
       <div class="p-name">Noir III</div>
-      <div class="p-sub">Spiced · Warm · Magnetic</div>
-      <div class="p-desc">Cardamom and tonka bean with a dry amber finish. Built for evenings. Bold enough to remember, refined enough to wear anywhere that counts.</div>
+      <div class="p-sub">Inspired by Azzaro Most Wanted</div>
+      <div class="p-desc">Dark, addictive, dangerously smooth. Noir III opens with cardamom and ginger before melting into rich toffee, warm woods and bourbon vanilla.</div>
+      <div class="p-notes">
+        <span>Top: Cardamom, Ginger</span>
+        <span>Heart: Toffee, Woodsy Notes</span>
+        <span>Base: Bourbon Vanilla, Amberwood</span>
+      </div>
+      <div class="p-meta">
+        <span>Date night · Evenings · Special occasions</span>
+        <span>Warm · Spicy · Seductive</span>
+      </div>
       <div class="p-foot">
-        <div class="p-price"><small>10ml Spray</small><b>Rs. 4,500</b></div>
+        <div class="p-price"><small>10ml Spray · 15% Off</small><div class="p-price-row"><span class="p-price-old">Rs. 4,000</span><span class="p-price-new">Rs. 3,399</span></div><span class="discount-badge">Limited batch price</span></div>
+        <a href="#contact" class="p-btn">→</a>
+      </div>
+    </div>
+
+    <div class="pcard reveal" style="transition-delay:.3s">
+      <div class="p-num">No. 04</div>
+      <div class="p-bottle">
+        <svg width="56" height="96" viewBox="0 0 56 96" fill="none">
+          <defs><linearGradient id="pb4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#67415f"/><stop offset="100%" stop-color="#2D0E3B"/></linearGradient></defs>
+          <rect x="20" y="4" width="16" height="6" rx="2" fill="#C45E1A" opacity=".85"/>
+          <rect x="22" y="10" width="12" height="7" rx="2" fill="#554C5B"/>
+          <rect x="8" y="17" width="40" height="72" rx="7" fill="url(#pb4)" stroke="rgba(183,110,121,.22)" stroke-width=".8"/>
+          <rect x="14" y="28" width="28" height="44" rx="3" fill="rgba(235,230,222,.04)" stroke="rgba(196,94,26,.24)" stroke-width=".6"/>
+          <text x="28" y="53" text-anchor="middle" font-family="serif" font-size="4" fill="rgba(235,230,222,.78)" letter-spacing=".8">NOIR IV</text>
+        </svg>
+      </div>
+      <div class="p-name">Noir IV</div>
+      <div class="p-sub">Inspired by Baccarat Rouge 540</div>
+      <div class="p-desc">Warm, woody and ambery. Noir IV opens with saffron and jasmine before evolving into amberwood and hedione, then cedarwood, fir resin and sugar.</div>
+      <div class="p-notes">
+        <span>Top: Saffron, Jasmine</span>
+        <span>Heart: Amberwood, Ambergris, Hedione</span>
+        <span>Base: Fir Resin, Cedar, Ambroxan, Sugar</span>
+      </div>
+      <div class="p-meta">
+        <span>Evening · Special occasions · Winter · Indoor settings</span>
+        <span>Warm · Ambery · Unisex · Niche</span>
+      </div>
+      <div class="p-foot">
+        <div class="p-price"><small>10ml Spray · 15% Off</small><div class="p-price-row"><span class="p-price-old">Rs. 5,000</span><span class="p-price-new">Rs. 4,249</span></div><span class="discount-badge">Limited batch price</span></div>
         <a href="#contact" class="p-btn">→</a>
       </div>
     </div>
@@ -921,7 +1024,7 @@ footer{
     <div class="step reveal" style="transition-delay:.1s">
       <div class="step-n">II</div>
       <div class="step-t">Acquire</div>
-      <div class="step-d">We source verified authentic designer fragrances from Sri Lanka's certified retailers. These form the genuine extract in every RE'NOIR blend.</div>
+      <div class="step-d">We study the scent profile, note structure, and wear pattern behind each inspiration before building the RE'NOIR version around our own oil blend.</div>
     </div>
     <div class="step reveal" style="transition-delay:.2s">
       <div class="step-n">III</div>
@@ -946,7 +1049,7 @@ footer{
     </div>
     <div class="trust-item">
       <div class="trust-icon">✦</div>
-      <div class="trust-val">3</div>
+        <div class="trust-val">4</div>
       <div class="trust-lbl">Signature Blends</div>
     </div>
     <div class="trust-item">
@@ -964,7 +1067,7 @@ footer{
     <div class="faq-list">
       <details class="faq-item">
         <summary>What is an inspired fragrance?<span>+</span></summary>
-        <p>An inspired fragrance is an original blend crafted to evoke the character and scent family of a well-known designer perfume. RE'NOIR blends rare master-grade oils with rare master-grade oils, so every bottle is built around real fragrance character rather than a flat synthetic copy.</p>
+        <p>An inspired fragrance is an original blend crafted to evoke the character and scent family of a well-known designer perfume. RE'NOIR uses rare master-grade oils, so every bottle is built around real fragrance character rather than a flat synthetic copy.</p>
       </details>
       <details class="faq-item">
         <summary>How long does RE'NOIR fragrance last?<span>+</span></summary>
@@ -972,11 +1075,11 @@ footer{
       </details>
       <details class="faq-item">
         <summary>How do I order RE'NOIR in Sri Lanka?<span>+</span></summary>
-        <p>RE'NOIR is available via Instagram DM at @renoir.perfume and by email at renoirperfumeceylon@gmail.com. First batch quantities are limited, so DM to check current availability.</p>
+        <p>RE'NOIR is available via Instagram DM at @renoir.perfume, WhatsApp at 0704427371, and email at renoirperfumeceylon@gmail.com. First batch quantities are limited, so message us to check current availability.</p>
       </details>
       <details class="faq-item">
         <summary>What is the price of RE'NOIR perfume?<span>+</span></summary>
-        <p>All RE'NOIR fragrances are priced at Rs. 4,500 for a 10ml glass atomizer spray. This includes Noir I, Noir II, and Noir III from the debut collection.</p>
+        <p>Noir I, Noir II and Noir III are discounted from Rs. 4,000 to Rs. 3,399. Noir IV is discounted from Rs. 5,000 to Rs. 4,249. All bottles are 10ml glass atomizer sprays.</p>
       </details>
       <details class="faq-item">
         <summary>Is RE'NOIR made in Sri Lanka?<span>+</span></summary>
@@ -990,11 +1093,21 @@ footer{
   <div class="reveal">
     <p class="sec-label">Order Now</p>
     <h2 class="sec-title on-dark">Ready to smell<br><em>unforgettable?</em></h2>
-    <p class="contact-sub">RE'NOIR is available via Instagram and WhatsApp. DM us to order, ask about a scent, or reserve a bottle from our first batch before they're gone.</p>
+    <p class="contact-sub">RE'NOIR is available via Instagram, WhatsApp, phone, and email. Message us to order, ask about a scent, or reserve a bottle from our first batch before they're gone.</p>
     <div class="c-links">
       <a href="https://instagram.com/renoir.perfume" class="c-link" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
         <span class="c-link-txt">@renoir.perfume</span>
+        <span class="c-link-arrow">→</span>
+      </a>
+      <a href="https://wa.me/message/GRUMA6R4S467O1" class="c-link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.8c0 2.1.6 4.1 1.6 5.9L0 24l6.5-1.7c1.7.9 3.6 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.4-8.4zM12.1 21.7c-1.8 0-3.5-.5-5-1.3l-.4-.2-3.9 1 1-3.8-.2-.4a9.8 9.8 0 0 1-1.5-5.2c0-5.4 4.4-9.8 9.9-9.8 2.6 0 5.1 1 6.9 2.9a9.6 9.6 0 0 1 2.9 6.9c.1 5.5-4.3 9.9-9.7 9.9zm5.4-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.7 5.8 5.1.8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.8-.7 2-1.5.3-.7.3-1.4.2-1.5-.2-.2-.4-.3-.7-.5z"/></svg>
+        <span class="c-link-txt">WhatsApp RE'NOIR</span>
+        <span class="c-link-arrow">→</span>
+      </a>
+      <a href="tel:+94704427371" class="c-link">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.8 21 3 13.2 3 3.8c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.4 0 .8-.3 1.1l-2.2 2.2z"/></svg>
+        <span class="c-link-txt">0704427371</span>
         <span class="c-link-arrow">→</span>
       </a>
       <a href="mailto:renoirperfumeceylon@gmail.com" class="c-link">
